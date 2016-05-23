@@ -201,7 +201,7 @@ namespace BrainShare
         }
         private void OfflineExperience()
         {
-            List<User> users = DatabaseOutputTask.SelectAllUsers();
+            List<UserAccount> users = DatabaseOutputTask.SelectAllUsers();
             if (users == null)
             {
                 var message = new MessageDialog(Message.Login_Message_Fail, Message.Login_Header).ShowAsync();
@@ -260,7 +260,7 @@ namespace BrainShare
         }
         private void OnlineExperience()
         {
-            List<User> users = DatabaseOutputTask.SelectAllUsers();
+            List<UserAccount> users = DatabaseOutputTask.SelectAllUsers();
             bool found = false;
             List<SubjectObservable> UserSubjects = new List<SubjectObservable>();
             UserObservable loggedIn = new UserObservable();
@@ -361,7 +361,7 @@ namespace BrainShare
         {
             List<SubjectObservable> subs = new List<SubjectObservable>();
             LibraryObservable lib = new LibraryObservable();
-            List<User> users = DatabaseOutputTask.SelectAllUsers();
+            List<UserAccount> users = DatabaseOutputTask.SelectAllUsers();
             bool found = false;
             lib = user.Library;
             subs = user.subjects;

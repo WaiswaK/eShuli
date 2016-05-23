@@ -84,7 +84,7 @@ namespace BrainShare.Views
                 char[] delimiter = { '.' };
                 List<SubjectObservable> subjectsNew = new List<SubjectObservable>();
                 var db = new SQLite.SQLiteConnection(Constants.dbPath);
-                var query = (db.Table<User>().Where(c => c.e_mail == user.email)).Single();
+                var query = (db.Table<UserAccount>().Where(c => c.e_mail == user.email)).Single();
 
                 string[] SplitSubjectId = query.subjects.Split(delimiter);
                 List<string> SubjectIdList = SplitSubjectId.ToList();
@@ -181,7 +181,7 @@ namespace BrainShare.Views
 
                         char[] delimiter = { '.' };
                         var db = new SQLite.SQLiteConnection(Constants.dbPath);
-                        var query = (db.Table<User>().Where(c => c.e_mail == username)).Single();
+                        var query = (db.Table<UserAccount>().Where(c => c.e_mail == username)).Single();
                         string[] SplitSubjectId = query.subjects.Split(delimiter);
                         List<string> SubjectIdList = SplitSubjectId.ToList();
                         List<int> subjectids = ModelTask.SubjectIdsConvert(SubjectIdList);

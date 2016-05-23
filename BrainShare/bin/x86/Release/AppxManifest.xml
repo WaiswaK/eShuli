@@ -7,9 +7,9 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="CodeVisionLtd.BrainShare" Publisher="CN=3B1181DF-D9D3-4BA5-977F-DE693151B3C1" Version="2.1.0.2" ProcessorArchitecture="x86" />
+  <Identity Name="CodeVisionLtd.eShuli" Publisher="CN=3B1181DF-D9D3-4BA5-977F-DE693151B3C1" Version="1.1.0.5" ProcessorArchitecture="x86" />
   <Properties>
-    <DisplayName>BrainShare</DisplayName>
+    <DisplayName>eShuli</DisplayName>
     <PublisherDisplayName>Code Vision Ltd</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -21,8 +21,8 @@
     <Resource Language="EN-US" />
   </Resources>
   <Applications>
-    <Application Id="App" Executable="BrainShare.exe" EntryPoint="BrainShare.App">
-      <m2:VisualElements DisplayName="BrainShare" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="BrainShare" ForegroundText="light" BackgroundColor="#3530A2">
+    <Application Id="App" Executable="eShuli.exe" EntryPoint="BrainShare.App">
+      <m2:VisualElements DisplayName="eShuli" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="eShuli" ForegroundText="light" BackgroundColor="#3530A2">
         <m2:SplashScreen Image="Assets\SplashScreen.png" />
       </m2:VisualElements>
     </Application>
@@ -37,11 +37,11 @@
     <build:Item Name="TargetFrameworkMoniker" Value=".NETCore,Version=v4.5.1" />
     <build:Item Name="VisualStudio" Version="14.0" />
     <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Enterprise 2015" />
-    <build:Item Name="OperatingSystem" Version="10.0.10240.16384 (th1.150709-1700)" />
+    <build:Item Name="OperatingSystem" Version="10.0.10586.0 (th2_release.151029-1700)" />
     <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="14.0.25123.0" />
     <build:Item Name="ProjectGUID" Value="{213F7EF9-6E77-436D-A088-051EB6A1DC00}" />
     <build:Item Name="Microsoft.Windows.UI.Xaml.81.Build.Tasks.dll" Version="14.0.22705.1" />
-    <build:Item Name="SQLite.WinRT81" Version="3.12.0" />
+    <build:Item Name="SQLite.WinRT81" Version="3.12.2" />
     <build:Item Name="MakePri.exe" Version="6.3.9600.17336 (winblue.150226-1500)" />
   </build:Metadata>
 </Package>

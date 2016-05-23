@@ -26,14 +26,14 @@ namespace BrainShare.Core
                 return nullSubject;
         }
         //Users in Database
-        public static List<User> SelectAllUsers()
+        public static List<UserAccount> SelectAllUsers()
         {
-            List<User> users = new List<User>();
-            List<User> nullUser = null;
+            List<UserAccount> users = new List<UserAccount>();
+            List<UserAccount> nullUser = null;
             int count = 0;
             using (var db = new SQLite.SQLiteConnection(Constants.dbPath))
             {
-                var query = (db.Table<User>().ToList());
+                var query = (db.Table<UserAccount>().ToList());
                 users = query;
                 count = query.Count;
             }
@@ -49,7 +49,7 @@ namespace BrainShare.Core
             List<int> subjectids = new List<int>();
             using (var db = new SQLite.SQLiteConnection(Constants.dbPath))
             {
-                var query = (db.Table<User>().Where(c => c.e_mail == username)).Single();
+                var query = (db.Table<UserAccount>().Where(c => c.e_mail == username)).Single();
                 string[] SplitSubjectId = query.subjects.Split(delimiter);
                 List<string> SubjectIdList = SplitSubjectId.ToList();
                 subjectids = ModelTask.SubjectIdsConvert(SubjectIdList);

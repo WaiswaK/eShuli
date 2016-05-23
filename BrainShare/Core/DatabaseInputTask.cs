@@ -128,7 +128,7 @@ namespace BrainShare.Core
             List<string> subjectsnames = ModelTask.SubjectNames(user.subjects);
             string ConcatSubjects = ModelTask.JoinedSubjects(subjectsnames);
             SchoolObservable school = user.School;
-            db.Insert(new User() { e_mail = user.email, password = user.password, School_id = school.SchoolId, subjects = ConcatSubjects, profileName = user.full_names });
+            db.Insert(new UserAccount() { e_mail = user.email, password = user.password, School_id = school.SchoolId, subjects = ConcatSubjects, profileName = user.full_names });
             try
             {
                 await CommonTask.ImageDownloader(school.ImagePath, school.SchoolName);
@@ -219,7 +219,7 @@ namespace BrainShare.Core
                 db.Update(sch);
             }
 
-            User userInfo = new User(user.email, user.password, user.full_names, ConcatSubjects, school.SchoolId);
+            UserAccount userInfo = new UserAccount(user.email, user.password, user.full_names, ConcatSubjects, school.SchoolId);
             db.Update(userInfo);
         }
         //Task to Update Subjects

@@ -28,7 +28,7 @@ namespace BrainShare.Database
                     db.CreateTable<Assignment>();
                     db.CreateTable<Attachment>();
                     db.CreateTable<Video>();
-                    db.CreateTable<User>();
+                    db.CreateTable<UserAccount>();
                     db.CreateTable<School>();
                     db.CreateTable<Book>();
                 };

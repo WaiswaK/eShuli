@@ -968,6 +968,9 @@ C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\B
 C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\Views\TopicPage.xbf
 C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\Views\TopicsPage.xbf
 C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\Views\VideosPage.xbf
+C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\eShuli.xr.xml
+C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\eShuli.exe
+C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\eShuli.pdb
 C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\resources.pri
 C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\AppxManifest.xml
 C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\BrainShare.build.appxrecipe
@@ -1037,6 +1040,8 @@ C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\B
 C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\obj\x86\Debug\Views\TopicsPage.xbf
 C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\obj\x86\Debug\Views\VideosPage.xbf
 C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\obj\x86\Debug\XamlSaveStateFile.xml
+C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\obj\x86\Debug\eShuli.exe
+C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\obj\x86\Debug\eShuli.pdb
 C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\obj\x86\Debug\BrainShare.csproj.GenerateResource.Cache
 C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\obj\x86\Debug\priconfig.xml
 C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\obj\x86\Debug\priconfig.xml.intermediate
@@ -1050,8 +1055,3 @@ C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\B
 C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\obj\x86\Debug\ProjectArchitectures.txt
-C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\eShuli.xr.xml
-C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\eShuli.exe
-C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\eShuli.pdb
-C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\obj\x86\Debug\eShuli.exe
-C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\obj\x86\Debug\eShuli.pdb

@@ -8,31 +8,31 @@
     <TargetOsDescription>Windows 8.1</TargetOsDescription>
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
-    <PackageIdentityName>CodeVisionLtd.BrainShare</PackageIdentityName>
+    <PackageIdentityName>CodeVisionLtd.eShuli</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\obj\x86\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>61524FFFAE748BE8A7608F6FFCBB1C12BA075F9C951C0DAF67729D649C848BCE</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>CodeVisionLtd.BrainShare_2.1.0.2_x86__fd97ja0290hr0</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>CodeVisionLtd.BrainShare_fd97ja0290hr0!App</RegisteredUserModeAppID>
-    <RegisteredPackageID>CodeVisionLtd.BrainShare</RegisteredPackageID>
+    <RegisteredManifestChecksum>300E1882C5C50673E3A6606959ECC6DA604EC326B7CEFD0BE810E3F90B5D0D30</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>CodeVisionLtd.eShuli_1.1.0.5_x86__fd97ja0290hr0</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>CodeVisionLtd.eShuli_fd97ja0290hr0!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>CodeVisionLtd.eShuli</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=3B1181DF-D9D3-4BA5-977F-DE693151B3C1</RegisteredPackagePublisher>
-    <RegisteredVersion>2.1.0.2</RegisteredVersion>
+    <RegisteredVersion>1.1.0.5</RegisteredVersion>
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-05-18T09:43:22.744</Modified>
+      <Modified>2016-05-23T12:49:06.303</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\eShuli.exe">
       <PackagePath>eShuli.exe</PackagePath>
-      <Modified>2016-05-18T09:45:05.378</Modified>
+      <Modified>2016-05-23T12:48:55.414</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\SQLite.WinRT81\3.12.2\Redist\Debug\x86\sqlite3.dll">
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\SQLite.WinRT81\3.13.0\Redist\Debug\x86\sqlite3.dll">
       <PackagePath>sqlite3.dll</PackagePath>
-      <Modified>2016-04-25T06:02:05.705</Modified>
+      <Modified>2016-05-20T16:14:53.100</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\Assets\bbgg.jpg">
       <PackagePath>Assets\bbgg.jpg</PackagePath>
@@ -125,12 +125,12 @@
     <AppxPackagedFile Include="C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-05-09T08:46:18.000</Modified>
+      <Modified>2016-05-20T15:06:30.232</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-05-09T08:46:18.000</Modified>
+      <Modified>2016-05-20T15:05:37.684</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
@@ -140,7 +140,7 @@
     <AppxPackagedFile Include="C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-05-09T08:46:18.000</Modified>
+      <Modified>2016-05-20T15:03:26.365</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\Assets\icons\pdf.gif">
       <PackagePath>Assets\icons\pdf.gif</PackagePath>
@@ -152,71 +152,71 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2016-05-17T10:31:26.000</Modified>
+      <Modified>2016-05-23T12:48:54.699</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\Views\CreateAccountPage.xbf">
       <PackagePath>Views\CreateAccountPage.xbf</PackagePath>
-      <Modified>2016-05-17T10:31:26.000</Modified>
+      <Modified>2016-05-23T12:48:54.699</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\Views\LibraryCategoryBooks.xbf">
       <PackagePath>Views\LibraryCategoryBooks.xbf</PackagePath>
-      <Modified>2016-05-17T10:31:26.000</Modified>
+      <Modified>2016-05-23T12:48:54.699</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\Views\DocumentsPage.xbf">
       <PackagePath>Views\DocumentsPage.xbf</PackagePath>
-      <Modified>2016-05-17T10:31:26.000</Modified>
+      <Modified>2016-05-23T12:48:54.700</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\Views\LoginPage.xbf">
       <PackagePath>Views\LoginPage.xbf</PackagePath>
-      <Modified>2016-05-18T09:45:04.625</Modified>
+      <Modified>2016-05-23T12:48:54.700</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\Views\LibraryBookReader.xbf">
       <PackagePath>Views\LibraryBookReader.xbf</PackagePath>
-      <Modified>2016-05-17T10:31:26.000</Modified>
+      <Modified>2016-05-23T12:48:54.700</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\Views\PlayPage.xbf">
       <PackagePath>Views\PlayPage.xbf</PackagePath>
-      <Modified>2016-05-17T10:31:26.000</Modified>
+      <Modified>2016-05-23T12:48:54.701</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\Views\PDFViewPage.xbf">
       <PackagePath>Views\PDFViewPage.xbf</PackagePath>
-      <Modified>2016-05-17T10:31:26.000</Modified>
+      <Modified>2016-05-23T12:48:54.701</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\Views\Settings.xbf">
       <PackagePath>Views\Settings.xbf</PackagePath>
-      <Modified>2016-05-17T10:31:26.000</Modified>
+      <Modified>2016-05-23T12:48:54.702</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\Views\StudentPage.xbf">
       <PackagePath>Views\StudentPage.xbf</PackagePath>
-      <Modified>2016-05-17T10:31:26.000</Modified>
+      <Modified>2016-05-23T12:48:54.702</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\Views\SubjectPage.xbf">
       <PackagePath>Views\SubjectPage.xbf</PackagePath>
-      <Modified>2016-05-17T10:31:26.000</Modified>
+      <Modified>2016-05-23T12:48:54.702</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\Views\AssignmentPage.xbf">
       <PackagePath>Views\AssignmentPage.xbf</PackagePath>
-      <Modified>2016-05-17T10:31:26.000</Modified>
+      <Modified>2016-05-23T12:48:54.702</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\Views\AssignmentsPage.xbf">
       <PackagePath>Views\AssignmentsPage.xbf</PackagePath>
-      <Modified>2016-05-17T10:31:26.000</Modified>
+      <Modified>2016-05-23T12:48:54.702</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\Views\TopicPage.xbf">
       <PackagePath>Views\TopicPage.xbf</PackagePath>
-      <Modified>2016-05-17T10:31:26.000</Modified>
+      <Modified>2016-05-23T12:48:54.702</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\Views\TopicsPage.xbf">
       <PackagePath>Views\TopicsPage.xbf</PackagePath>
-      <Modified>2016-05-17T10:31:26.000</Modified>
+      <Modified>2016-05-23T12:48:54.703</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\Views\VideosPage.xbf">
       <PackagePath>Views\VideosPage.xbf</PackagePath>
-      <Modified>2016-05-17T10:31:26.000</Modified>
+      <Modified>2016-05-23T12:48:54.703</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-05-18T09:43:21.942</Modified>
+      <Modified>2016-05-23T12:49:03.904</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
