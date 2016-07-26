@@ -75,6 +75,7 @@ namespace BrainShare.Views
         {
             var user = e.NavigationParameter as UserObservable;
             UserObservable initial = user;
+            List<SubjectObservable> all_subjects = new List<SubjectObservable>();
 
             //Notes and Notes Module Settings Check
             if (ApplicationData.Current.LocalSettings.Values.ContainsKey(_noteskey))
@@ -95,6 +96,8 @@ namespace BrainShare.Views
                     subjectsNew.Add(subject);
                 }
                 user.subjects = subjectsNew;
+                all_subjects = user.subjects;
+                user.subjects = ModelTask.DisplayableSubjects(user.subjects);
             }
             else
             {
@@ -268,17 +271,6 @@ namespace BrainShare.Views
 
                                     LibraryObservable newContentLibrary = ModelTask.CompareLibraries(Old_Library, Current_Library);
                                     List<Library_CategoryObservable> updatedOldContentLibrary = ModelTask.Categories_Update(Old_Library.categories, newContentLibrary.categories);
-
-
-                                    //Have this script everywhere you see the above decleration
-
-                                    // List<Library_CategoryObservable> removeOldContentLibrary = CommonTask.Category_Update_Removal(Old_Library.categories, newContentLibrary.categories);
-
-                                    //Then modify the method below to contain it's value
-                                    //Can't do that cause i only have 2 files and so i can't see everywhere they are
-                                    //Methods are ready in CommonTask only need to bne called
-
-
 
                                     if (newContentLibrary == null && updatedOldContentLibrary != null)
                                     {

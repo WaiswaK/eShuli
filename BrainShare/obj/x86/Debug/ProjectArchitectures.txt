@@ -1,1 +1,1 @@
-C:\Users\Kenneth\OneDrive\Documents\Visual Studio 2015\Projects\eShuli 2.0.0.0\BrainShare\BrainShare.csproj;x86
+D:\OneDrive\Projects\eShuli 1.0.0.0\BrainShare\BrainShare.csproj;x86

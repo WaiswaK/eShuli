@@ -53,9 +53,6 @@ namespace BrainShare.Views
             var subject = e.NavigationParameter as SubjectObservable;
             SubjectPageViewModel vm = new SubjectPageViewModel(subject);
             DataContext = vm;  
-
-
-
         }
 
        
