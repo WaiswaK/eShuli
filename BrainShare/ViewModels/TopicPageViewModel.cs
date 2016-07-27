@@ -18,11 +18,17 @@ namespace BrainShare.ViewModels
             get { return _notes; }
             set { _notes = value; }
         }
-   
+        private List<AttachmentObservable> _attachments;
+        public List<AttachmentObservable> AttachmentList
+        {
+            get { return _attachments; }
+            set { _attachments = value; }
+        }
         public TopicPageViewModel(TopicObservable Topic)
         {
             TopicName = Topic.TopicTitle;
             TopicNotes = Topic.notes;
+            AttachmentList = Topic.Files;
         }
 
     }

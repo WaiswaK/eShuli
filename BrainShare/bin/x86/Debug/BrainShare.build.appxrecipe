@@ -125,9 +125,6 @@
     <AppxPackagedFile Include="D:\OneDrive\Projects\eShuli 1.0.0.0\BrainShare\bin\x86\Debug\Views\LibraryCategoryBooks.xbf">
       <PackagePath>Views\LibraryCategoryBooks.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\OneDrive\Projects\eShuli 1.0.0.0\BrainShare\bin\x86\Debug\Views\DocumentsPage.xbf">
-      <PackagePath>Views\DocumentsPage.xbf</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\OneDrive\Projects\eShuli 1.0.0.0\BrainShare\bin\x86\Debug\Views\LoginPage.xbf">
       <PackagePath>Views\LoginPage.xbf</PackagePath>
     </AppxPackagedFile>

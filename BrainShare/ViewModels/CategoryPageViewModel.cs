@@ -11,12 +11,6 @@ namespace BrainShare.ViewModels
             get { return _categoryName; }
             set { _categoryName = value; }
         }
-        private List<AttachmentObservable> _bookList;
-        public List<AttachmentObservable> FileList
-        {
-            get { return _bookList; }
-            set { _bookList = value; }
-        }
         private List<VideoObservable> _videosList;
         public List<VideoObservable> VideosList
         {
@@ -31,7 +25,6 @@ namespace BrainShare.ViewModels
         }
         public CategoryPageViewModel(CategoryObservable category)
         {
-            FileList = category.files;
             VideosList = category.videos;
             AssignmentList = category.assignments;
             CategoryName = category.categoryName;

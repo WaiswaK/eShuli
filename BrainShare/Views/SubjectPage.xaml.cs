@@ -53,9 +53,13 @@ namespace BrainShare.Views
             var subject = e.NavigationParameter as SubjectObservable;
             SubjectPageViewModel vm = new SubjectPageViewModel(subject);
             DataContext = vm;  
+        }       
+        private void Book_click(object sender, ItemClickEventArgs e)
+        {
+            var item = e.ClickedItem;
+            AttachmentObservable _file = ((AttachmentObservable)item);
+            Frame.Navigate(typeof(PDFViewPage), _file);
         }
-
-       
         private void Category_click(object sender, ItemClickEventArgs e)
         {
             var item = e.ClickedItem;
@@ -67,10 +71,6 @@ namespace BrainShare.Views
             if (_category.categoryName.Equals("Videos")) 
             {
                 Frame.Navigate(typeof(VideosPage), _category);
-            }
-            if (_category.categoryName.Equals("Files")) 
-            {
-                Frame.Navigate(typeof(DocumentsPage), _category);
             }
             if (_category.categoryName.Equals("Assignments")) 
             {

@@ -124,11 +124,11 @@ namespace BrainShare.Views
             {
                 if (CommonTask.IsInternetConnectionAvailable())
                 {
-                    UpdateUser(initial.email, initial.password, DatabaseOutputTask.SubjectIdsForUser(initial.email), user.subjects, user);
+                    UpdateUser(initial.email, initial.password, DatabaseOutputTask.SubjectIdsForUser(initial.email), all_subjects, user);
                     if (user.NotesImagesDownloading == false)
                     {
                         user.NotesImagesDownloading = true;
-                        NotesTask.GetNotesImagesSubjectsAsync(user.subjects);
+                        NotesTask.GetNotesImagesSubjectsAsync(all_subjects);
                     }
                 }
             }

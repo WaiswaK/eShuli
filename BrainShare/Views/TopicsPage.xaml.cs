@@ -64,13 +64,6 @@ namespace BrainShare.Views
             TopicsPageViewModel vm = new TopicsPageViewModel(topics);
             DataContext = vm;  
         }
-
-        private void File_click(object sender, ItemClickEventArgs e)
-        {
-            var item = e.ClickedItem;
-            AttachmentObservable _file = ((AttachmentObservable)item);
-            Frame.Navigate(typeof(PDFViewPage), _file);
-        }
         private void itemGridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 

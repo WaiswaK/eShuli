@@ -18,13 +18,19 @@ namespace BrainShare.ViewModels
             get { return _category; }
             set { _category = value; }
         }
+        private List<AttachmentObservable> _bookList;
+        public List<AttachmentObservable> FileList
+        {
+            get { return _bookList; }
+            set { _bookList = value; }
+        }
         private List<FolderObservable> topics;
         public List<FolderObservable> TopicList
         {
             get { return topics; }
             set { topics = value; }
         }
-        public List<FolderObservable> GetFolders(List<TopicObservable> topics) 
+        private List<FolderObservable> GetFolders(List<TopicObservable> topics) 
         {
             List<FolderObservable> folders = new List<FolderObservable>();
             foreach (var topic in topics)
@@ -97,18 +103,29 @@ namespace BrainShare.ViewModels
             }
             return folders;
         }
-        public SubjectPageViewModel(SubjectObservable subject)
+        private List<CategoryObservable> SortedCategories(SubjectObservable subject)
         {
             List<CategoryObservable> categories = new List<CategoryObservable>();
             CategoryObservable videos = new CategoryObservable("Videos", "ms-appx:///Assets/icons/video-library.jpg", subject.videos.Count, subject.videos);
-            CategoryObservable files = new CategoryObservable("Files", "ms-appx:///Assets/icons/Files.jpg", subject.files.Count, subject.files);
             CategoryObservable assignments = new CategoryObservable("Assignments", "ms-appx:///Assets/icons/assignment.jpg", subject.assignments.Count, subject.assignments);
             categories.Add(videos);
-            categories.Add(files);
             categories.Add(assignments);
+            if (subject.assignments.Count == 0)
+            {
+                categories.Remove(assignments);
+            }
+            if (subject.videos.Count == 0)
+            {
+                categories.Remove(videos);
+            }
+            return categories;
+        }
+        public SubjectPageViewModel(SubjectObservable subject)
+        {          
             SubjectName = subject.name;
-            CategoryList = categories;
+            CategoryList = SortedCategories(subject);
             TopicList = GetFolders(subject.topics);
+            FileList = subject.files;
         }
     }
 }
