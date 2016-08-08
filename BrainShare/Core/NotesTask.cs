@@ -11,104 +11,23 @@ namespace BrainShare.Core
 {
     class NotesTask
     {
-        public static async Task<string> NotesUpdater(string notes, string subject, string topic)
-        {
-            string start_string_two = "http://";
-            string expression_png = start_string_two + @"\S*" + Constants.PNG_extension;
-            string expression_jpg = start_string_two + @"\S*" + Constants.JPG_extension;
-            string expression_gif = start_string_two + @"\S*" + Constants.GIF_extension;
-            string expression_bmp = start_string_two + @"\S*" + Constants.BMP_extension;
-            string expression_tiff = start_string_two + @"\S*" + Constants.TIFF_extension;
-
-            //Upper Case
-            string expression_PNG = start_string_two + @"\S*" + Constants.PNG_extension.ToUpper();
-            string expression_JPG = start_string_two + @"\S*" + Constants.JPG_extension.ToUpper();
-            string expression_GIF = start_string_two + @"\S*" + Constants.GIF_extension.ToUpper();
-            string expression_BMP = start_string_two + @"\S*" + Constants.BMP_extension.ToUpper();
-            string expression_TIFF = start_string_two + @"\S*" + Constants.TIFF_extension.ToUpper();
-
-            List<string> jpg_links = Links(notes, expression_jpg); //Links with png
-            List<string> png_links = Links(notes, expression_png); //Links with jpg
-            List<string> gif_links = Links(notes, expression_gif); //Links with gif
-            List<string> bmp_links = Links(notes, expression_bmp); //Links with bmp
-            List<string> tiff_links = Links(notes, expression_tiff); //Links with tiff
-
-            //Upper Case
-            List<string> JPG_links = Links(notes, expression_JPG); //Links with png
-            List<string> PNG_links = Links(notes, expression_PNG); //Links with jpg
-            List<string> GIF_links = Links(notes, expression_GIF); //Links with gif
-            List<string> BMP_links = Links(notes, expression_BMP); //Links with bmp
-            List<string> TIFF_links = Links(notes, expression_TIFF); //Links with tiff
-
-            foreach (string _string in JPG_links)
-            {
-                string imageName = "data:image/jpg;base64, " + await ImageTask.Base64(_string);
-                notes.Replace(_string, imageName);
-            }
-            foreach (string _string in PNG_links)
-            {
-                string imageName = "data:image/png;base64, " + await ImageTask.Base64(_string);
-                notes.Replace(_string, imageName);
-            }
-            foreach (string _string in GIF_links)
-            {
-                string imageName = "data:image/gif;base64, " + await ImageTask.Base64(_string);
-                notes.Replace(_string, imageName);
-            }
-            foreach (string _string in BMP_links)
-            {
-                string imageName = "data:image/bmp;base64, " + await ImageTask.Base64(_string);
-                notes.Replace(_string, imageName);
-            }
-            foreach (string _string in TIFF_links)
-            {
-                string imageName = "data:image/tiff;base64, " + await ImageTask.Base64(_string);
-                notes.Replace(_string, imageName);
-            }
-            foreach (string _string in jpg_links)
-            {
-                string imageName = "data:image/jpg;base64, " + await ImageTask.Base64(_string);
-                notes.Replace(_string, imageName);
-            }
-            foreach (string _string in png_links)
-            {
-                string imageName = "data:image/png;base64, " + await ImageTask.Base64(_string);
-                notes.Replace(_string, imageName);
-            }
-            foreach (string _string in gif_links)
-            {
-                string imageName = "data:image/gif;base64, " + await ImageTask.Base64(_string);
-                notes.Replace(_string, imageName);
-            }
-            foreach (string _string in bmp_links)
-            {
-                string imageName = "data:image/bmp;base64, " + await ImageTask.Base64(_string);
-                notes.Replace(_string, imageName);
-            }
-            foreach (string _string in tiff_links)
-            {
-                string imageName = "data:image/tiff;base64, " + await ImageTask.Base64(_string);
-                notes.Replace(_string, imageName);
-            }
-            return notes;
-        }
         //Offline notes
         public static async Task<string> Offline_Notes(string notes, string subject, string topic)
         {
             int notes_image = 0;
             string start_string_two = "http://";
-            string expression_png = start_string_two + @"\S*" + Constants.PNG_extension;
-            string expression_jpg = start_string_two + @"\S*" + Constants.JPG_extension;
-            string expression_gif = start_string_two + @"\S*" + Constants.GIF_extension;
-            string expression_bmp = start_string_two + @"\S*" + Constants.BMP_extension;
-            string expression_tiff = start_string_two + @"\S*" + Constants.TIFF_extension;
+            string expression_png = start_string_two + @"\S*" + Constant.PNG_extension;
+            string expression_jpg = start_string_two + @"\S*" + Constant.JPG_extension;
+            string expression_gif = start_string_two + @"\S*" + Constant.GIF_extension;
+            string expression_bmp = start_string_two + @"\S*" + Constant.BMP_extension;
+            string expression_tiff = start_string_two + @"\S*" + Constant.TIFF_extension;
 
             //Upper Case
-            string expression_PNG = start_string_two + @"\S*" + Constants.PNG_extension.ToUpper();
-            string expression_JPG = start_string_two + @"\S*" + Constants.JPG_extension.ToUpper();
-            string expression_GIF = start_string_two + @"\S*" + Constants.GIF_extension.ToUpper();
-            string expression_BMP = start_string_two + @"\S*" + Constants.BMP_extension.ToUpper();
-            string expression_TIFF = start_string_two + @"\S*" + Constants.TIFF_extension.ToUpper();
+            string expression_PNG = start_string_two + @"\S*" + Constant.PNG_extension.ToUpper();
+            string expression_JPG = start_string_two + @"\S*" + Constant.JPG_extension.ToUpper();
+            string expression_GIF = start_string_two + @"\S*" + Constant.GIF_extension.ToUpper();
+            string expression_BMP = start_string_two + @"\S*" + Constant.BMP_extension.ToUpper();
+            string expression_TIFF = start_string_two + @"\S*" + Constant.TIFF_extension.ToUpper();
 
             List<string> jpg_links = Links(notes, expression_jpg); //Links with png
             List<string> png_links = Links(notes, expression_png); //Links with jpg
@@ -129,7 +48,7 @@ namespace BrainShare.Core
             {
                 notes_image++;
                 string _generatedName = subject + "-" + topic + "_" + "notes_image" + notes_image.ToString();
-                string imageName = "data:image/jpg;base64, " + await ImageTask.LocalBase64(_generatedName, Constants.JPG_extension);
+                string imageName = "data:image/jpg;base64, " + await ImageTask.LocalBase64(_generatedName, Constant.JPG_extension);
                 new_notes = new_notes.Replace(_string, imageName);
                 //notes = new_notes; //Carry the new value in notes
             }
@@ -137,82 +56,87 @@ namespace BrainShare.Core
             {
                 notes_image++;
                 string _generatedName = subject + "-" + topic + "_" + "notes_image" + notes_image.ToString();
-                string imageName = "data:image/png;base64, " + await ImageTask.LocalBase64(_generatedName, Constants.PNG_extension);
+                string imageName = "data:image/png;base64, " + await ImageTask.LocalBase64(_generatedName, Constant.PNG_extension);
                 new_notes = new_notes.Replace(_string, imageName);
             }
             foreach (string _string in GIF_links)
             {
                 notes_image++;
                 string _generatedName = subject + "-" + topic + "_" + "notes_image" + notes_image.ToString();
-                string imageName = "data:image/gif;base64, " + await ImageTask.LocalBase64(_generatedName, Constants.GIF_extension);
+                string imageName = "data:image/gif;base64, " + await ImageTask.LocalBase64(_generatedName, Constant.GIF_extension);
                 new_notes = new_notes.Replace(_string, imageName);
             }
             foreach (string _string in BMP_links)
             {
                 notes_image++;
                 string _generatedName = subject + "-" + topic + "_" + "notes_image" + notes_image.ToString();
-                string imageName = "data:image/bmp;base64, " + await ImageTask.LocalBase64(_generatedName, Constants.BMP_extension);
+                string imageName = "data:image/bmp;base64, " + await ImageTask.LocalBase64(_generatedName, Constant.BMP_extension);
                 new_notes = new_notes.Replace(_string, imageName);
             }
             foreach (string _string in TIFF_links)
             {
                 notes_image++;
                 string _generatedName = subject + "-" + topic + "_" + "notes_image" + notes_image.ToString();
-                string imageName = "data:image/tiff;base64, " + await ImageTask.LocalBase64(_generatedName, Constants.TIFF_extension);
+                string imageName = "data:image/tiff;base64, " + await ImageTask.LocalBase64(_generatedName, Constant.TIFF_extension);
                 new_notes = new_notes.Replace(_string, imageName);
             }
             foreach (string _string in jpg_links)
             {
                 notes_image++;
                 string _generatedName = subject + "-" + topic + "_" + "notes_image" + notes_image.ToString();
-                string imageName = "data:image/jpg;base64, " + await ImageTask.LocalBase64(_generatedName, Constants.JPG_extension);
+                string imageName = "data:image/jpg;base64, " + await ImageTask.LocalBase64(_generatedName, Constant.JPG_extension);
                 new_notes = new_notes.Replace(_string, imageName);
             }
             foreach (string _string in png_links)
             {
                 notes_image++;
                 string _generatedName = subject + "-" + topic + "_" + "notes_image" + notes_image.ToString();
-                string imageName = "data:image/png;base64, " + await ImageTask.LocalBase64(_generatedName, Constants.PNG_extension);
+                string imageName = "data:image/png;base64, " + await ImageTask.LocalBase64(_generatedName, Constant.PNG_extension);
                 new_notes = new_notes.Replace(_string, imageName);
             }
             foreach (string _string in gif_links)
             {
                 notes_image++;
                 string _generatedName = subject + "-" + topic + "_" + "notes_image" + notes_image.ToString();
-                string imageName = "data:image/gif;base64, " + await ImageTask.LocalBase64(_generatedName, Constants.GIF_extension);
+                string imageName = "data:image/gif;base64, " + await ImageTask.LocalBase64(_generatedName, Constant.GIF_extension);
                 new_notes = new_notes.Replace(_string, imageName);
             }
             foreach (string _string in bmp_links)
             {
                 notes_image++;
                 string _generatedName = subject + "-" + topic + "_" + "notes_image" + notes_image.ToString();
-                string imageName = "data:image/bmp;base64, " + await ImageTask.LocalBase64(_generatedName, Constants.BMP_extension);
+                string imageName = "data:image/bmp;base64, " + await ImageTask.LocalBase64(_generatedName, Constant.BMP_extension);
                 new_notes = new_notes.Replace(_string, imageName);
             }
             foreach (string _string in tiff_links)
             {
                 notes_image++;
                 string _generatedName = subject + "-" + topic + "_" + "notes_image" + notes_image.ToString();
-                string imageName = "data:image/tiff;base64, " + await ImageTask.LocalBase64(_generatedName, Constants.TIFF_extension);
+                string imageName = "data:image/tiff;base64, " + await ImageTask.LocalBase64(_generatedName, Constant.TIFF_extension);
                 new_notes = new_notes.Replace(_string, imageName);
             }
             return new_notes;
         }
-        public static async Task<string> Notes_loader(TopicObservable topic)
+        public static async Task<string> Notes_loader(TopicModel topic)
         {
             string subject_name = string.Empty;
             string topic_name = topic.folder_name;
             try
             {
-                using (var db = new SQLite.SQLiteConnection(Constants.dbPath))
+                using (var db = new SQLite.SQLiteConnection(Constant.dbPath))
                 {
                     var query_topic = (db.Table<Topic>().Where(c => c.TopicID == topic.TopicID)).Single();
                     var query_subject = (db.Table<Subject>().Where(c => c.SubjectId == query_topic.SubjectId)).Single();
                     subject_name = query_subject.name;
                 }
             }
-            catch
+            catch (Exception ex)
             {
+                ErrorLogTask Logfile = new ErrorLogTask();
+                Logfile.Error_details = ex.ToString();
+                Logfile.Error_title = "Notes_Loader Method";
+                Logfile.Location = "NotesTask";
+                ErrorLogTask.LogFileSaveAsync(Logfile);
             }
             string _notes = await Offline_Notes(topic.notes, subject_name, topic_name);
             return _notes;
@@ -228,7 +152,7 @@ namespace BrainShare.Core
             {
                 string _newString = _string.Replace(ImageTask.imageNumbers(_string), string.Empty); //Removing the 10 
                 _newString = _newString.Replace("?", string.Empty); //Removing the ? Mark
-                _newString = Constants.BaseUri + _newString; //New link to be added in notes
+                _newString = Constant.BaseUri + _newString; //New link to be added in notes
                 _newString = _newString.Trim();
                 new_notes = new_notes.Replace(_string, _newString); //Replace with link that is full
             }
@@ -239,18 +163,18 @@ namespace BrainShare.Core
         {
             int notes_image = 0;
             string start_string = "http://";
-            string expression_png = start_string + @"\S*" + Constants.PNG_extension;
-            string expression_jpg = start_string + @"\S*" + Constants.JPG_extension;
-            string expression_gif = start_string + @"\S*" + Constants.GIF_extension;
-            string expression_bmp = start_string + @"\S*" + Constants.BMP_extension;
-            string expression_tiff = start_string + @"\S*" + Constants.TIFF_extension;
+            string expression_png = start_string + @"\S*" + Constant.PNG_extension;
+            string expression_jpg = start_string + @"\S*" + Constant.JPG_extension;
+            string expression_gif = start_string + @"\S*" + Constant.GIF_extension;
+            string expression_bmp = start_string + @"\S*" + Constant.BMP_extension;
+            string expression_tiff = start_string + @"\S*" + Constant.TIFF_extension;
 
             //Upper Case
-            string expression_PNG = start_string + @"\S*" + Constants.PNG_extension.ToUpper();
-            string expression_JPG = start_string + @"\S*" + Constants.JPG_extension.ToUpper();
-            string expression_GIF = start_string + @"\S*" + Constants.GIF_extension.ToUpper();
-            string expression_BMP = start_string + @"\S*" + Constants.BMP_extension.ToUpper();
-            string expression_TIFF = start_string + @"\S*" + Constants.TIFF_extension.ToUpper();
+            string expression_PNG = start_string + @"\S*" + Constant.PNG_extension.ToUpper();
+            string expression_JPG = start_string + @"\S*" + Constant.JPG_extension.ToUpper();
+            string expression_GIF = start_string + @"\S*" + Constant.GIF_extension.ToUpper();
+            string expression_BMP = start_string + @"\S*" + Constant.BMP_extension.ToUpper();
+            string expression_TIFF = start_string + @"\S*" + Constant.TIFF_extension.ToUpper();
 
             List<string> jpg_links = Links(notes, expression_jpg); //Links with jpg
             List<string> png_links = Links(notes, expression_png); //Links with png
@@ -273,14 +197,23 @@ namespace BrainShare.Core
                 {
                     await CommonTask.ImageDownloader(_string, imageName);
                 }
-                catch
+                catch (Exception ex)
                 {
+                    ErrorLogTask Logfile = new ErrorLogTask();
+                    Logfile.Error_details = ex.ToString();
+                    Logfile.Error_title = "NotesImagedownloader Method";
+                    Logfile.Location = "NotesTask";
+                    ErrorLogTask.LogFileSaveAsync(Logfile);
                     try
                     {
-                        await CommonTask.ForceImageDownloader(_string, imageName, Constants.JPG_extension);
+                        await CommonTask.ForceImageDownloader(_string, imageName, Constant.JPG_extension);
                     }
-                    catch
+                    catch (Exception exc)
                     {
+                        Logfile.Error_details = exc.ToString();
+                        Logfile.Error_title = "NotesImagedownloader Method";
+                        Logfile.Location = "NotesTask";
+                        ErrorLogTask.LogFileSaveAsync(Logfile);
                     }
                 }
             }
@@ -293,14 +226,23 @@ namespace BrainShare.Core
                 {
                     await CommonTask.ImageDownloader(_string, imageName);
                 }
-                catch
+                catch (Exception ex)
                 {
+                    ErrorLogTask Logfile = new ErrorLogTask();
+                    Logfile.Error_details = ex.ToString();
+                    Logfile.Error_title = "NotesImagedownloader Method";
+                    Logfile.Location = "NotesTask";
+                    ErrorLogTask.LogFileSaveAsync(Logfile);
                     try
                     {
-                        await CommonTask.ForceImageDownloader(_string, imageName, Constants.PNG_extension);
+                        await CommonTask.ForceImageDownloader(_string, imageName, Constant.PNG_extension);
                     }
-                    catch
+                    catch (Exception exc)
                     {
+                        Logfile.Error_details = exc.ToString();
+                        Logfile.Error_title = "NotesImagedownloader Method";
+                        Logfile.Location = "NotesTask";
+                        ErrorLogTask.LogFileSaveAsync(Logfile);
                     }
                 }
             }
@@ -313,15 +255,24 @@ namespace BrainShare.Core
                 {
                     await CommonTask.ImageDownloader(_string, imageName);
                 }
-                catch
+                catch (Exception ex)
                 {
+                    ErrorLogTask Logfile = new ErrorLogTask();
+                    Logfile.Error_details = ex.ToString();
+                    Logfile.Error_title = "NotesImagedownloader Method";
+                    Logfile.Location = "NotesTask";
+                    ErrorLogTask.LogFileSaveAsync(Logfile);
 
                     try
                     {
-                        await CommonTask.ForceImageDownloader(_string, imageName, Constants.GIF_extension);
+                        await CommonTask.ForceImageDownloader(_string, imageName, Constant.GIF_extension);
                     }
-                    catch
+                    catch (Exception exc)
                     {
+                        Logfile.Error_details = exc.ToString();
+                        Logfile.Error_title = "NotesImagedownloader Method";
+                        Logfile.Location = "NotesTask";
+                        ErrorLogTask.LogFileSaveAsync(Logfile);
                     }
                 }
             }
@@ -334,14 +285,23 @@ namespace BrainShare.Core
                 {
                     await CommonTask.ImageDownloader(_string, imageName);
                 }
-                catch
+                catch (Exception ex)
                 {
+                    ErrorLogTask Logfile = new ErrorLogTask();
+                    Logfile.Error_details = ex.ToString();
+                    Logfile.Error_title = "NotesImagedownloader Method";
+                    Logfile.Location = "NotesTask";
+                    ErrorLogTask.LogFileSaveAsync(Logfile);
                     try
                     {
-                        await CommonTask.ForceImageDownloader(_string, imageName, Constants.BMP_extension);
+                        await CommonTask.ForceImageDownloader(_string, imageName, Constant.BMP_extension);
                     }
-                    catch
+                    catch (Exception exc)
                     {
+                        Logfile.Error_details = exc.ToString();
+                        Logfile.Error_title = "NotesImagedownloader Method";
+                        Logfile.Location = "NotesTask";
+                        ErrorLogTask.LogFileSaveAsync(Logfile);
                     }
                 }
             }
@@ -354,14 +314,23 @@ namespace BrainShare.Core
                 {
                     await CommonTask.ImageDownloader(_string, imageName);
                 }
-                catch
+                catch (Exception ex)
                 {
+                    ErrorLogTask Logfile = new ErrorLogTask();
+                    Logfile.Error_details = ex.ToString();
+                    Logfile.Error_title = "NotesImagedownloader Method";
+                    Logfile.Location = "NotesTask";
+                    ErrorLogTask.LogFileSaveAsync(Logfile);
                     try
                     {
-                        await CommonTask.ForceImageDownloader(_string, imageName, Constants.TIFF_extension);
+                        await CommonTask.ForceImageDownloader(_string, imageName, Constant.TIFF_extension);
                     }
-                    catch
+                    catch (Exception exc)
                     {
+                        Logfile.Error_details = exc.ToString();
+                        Logfile.Error_title = "NotesImagedownloader Method";
+                        Logfile.Location = "NotesTask";
+                        ErrorLogTask.LogFileSaveAsync(Logfile);
                     }
                 }
             }
@@ -375,14 +344,23 @@ namespace BrainShare.Core
                 {
                     await CommonTask.ImageDownloader(_string, imageName);
                 }
-                catch
+                catch (Exception ex)
                 {
+                    ErrorLogTask Logfile = new ErrorLogTask();
+                    Logfile.Error_details = ex.ToString();
+                    Logfile.Error_title = "NotesImagedownloader Method";
+                    Logfile.Location = "NotesTask";
+                    ErrorLogTask.LogFileSaveAsync(Logfile);
                     try
                     {
-                        await CommonTask.ForceImageDownloader(_string, imageName, Constants.JPG_extension);
+                        await CommonTask.ForceImageDownloader(_string, imageName, Constant.JPG_extension);
                     }
-                    catch
+                    catch (Exception exc)
                     {
+                        Logfile.Error_details = exc.ToString();
+                        Logfile.Error_title = "NotesImagedownloader Method";
+                        Logfile.Location = "NotesTask";
+                        ErrorLogTask.LogFileSaveAsync(Logfile);
                     }
                 }
             }
@@ -395,14 +373,23 @@ namespace BrainShare.Core
                 {
                     await CommonTask.ImageDownloader(_string, imageName);
                 }
-                catch
+                catch (Exception ex)
                 {
+                    ErrorLogTask Logfile = new ErrorLogTask();
+                    Logfile.Error_details = ex.ToString();
+                    Logfile.Error_title = "NotesImagedownloader Method";
+                    Logfile.Location = "NotesTask";
+                    ErrorLogTask.LogFileSaveAsync(Logfile);
                     try
                     {
-                        await CommonTask.ForceImageDownloader(_string, imageName, Constants.PNG_extension);
+                        await CommonTask.ForceImageDownloader(_string, imageName, Constant.PNG_extension);
                     }
-                    catch
+                    catch (Exception exc)
                     {
+                        Logfile.Error_details = exc.ToString();
+                        Logfile.Error_title = "NotesImagedownloader Method";
+                        Logfile.Location = "NotesTask";
+                        ErrorLogTask.LogFileSaveAsync(Logfile);
                     }
                 }
             }
@@ -415,14 +402,23 @@ namespace BrainShare.Core
                 {
                     await CommonTask.ImageDownloader(_string, imageName);
                 }
-                catch
+                catch (Exception ex)
                 {
+                    ErrorLogTask Logfile = new ErrorLogTask();
+                    Logfile.Error_details = ex.ToString();
+                    Logfile.Error_title = "NotesImagedownloader Method";
+                    Logfile.Location = "NotesTask";
+                    ErrorLogTask.LogFileSaveAsync(Logfile);
                     try
                     {
-                        await CommonTask.ForceImageDownloader(_string, imageName, Constants.GIF_extension);
+                        await CommonTask.ForceImageDownloader(_string, imageName, Constant.GIF_extension);
                     }
-                    catch
+                    catch (Exception exc)
                     {
+                        Logfile.Error_details = exc.ToString();
+                        Logfile.Error_title = "NotesImagedownloader Method";
+                        Logfile.Location = "NotesTask";
+                        ErrorLogTask.LogFileSaveAsync(Logfile);
                     }
                 }
             }
@@ -435,14 +431,23 @@ namespace BrainShare.Core
                 {
                     await CommonTask.ImageDownloader(_string, imageName);
                 }
-                catch
+                catch (Exception ex)
                 {
+                    ErrorLogTask Logfile = new ErrorLogTask();
+                    Logfile.Error_details = ex.ToString();
+                    Logfile.Error_title = "NotesImagedownloader Method";
+                    Logfile.Location = "NotesTask";
+                    ErrorLogTask.LogFileSaveAsync(Logfile);
                     try
                     {
-                        await CommonTask.ForceImageDownloader(_string, imageName, Constants.BMP_extension);
+                        await CommonTask.ForceImageDownloader(_string, imageName, Constant.BMP_extension);
                     }
-                    catch
+                    catch (Exception exc)
                     {
+                        Logfile.Error_details = exc.ToString();
+                        Logfile.Error_title = "NotesImagedownloader Method";
+                        Logfile.Location = "NotesTask";
+                        ErrorLogTask.LogFileSaveAsync(Logfile);
                     }
                 }
             }
@@ -455,25 +460,34 @@ namespace BrainShare.Core
                 {
                     await CommonTask.ImageDownloader(_string, imageName);
                 }
-                catch
-                {    
+                catch (Exception ex)
+                {
+                    ErrorLogTask Logfile = new ErrorLogTask();
+                    Logfile.Error_details = ex.ToString();
+                    Logfile.Error_title = "NotesImagedownloader Method";
+                    Logfile.Location = "NotesTask";
+                    ErrorLogTask.LogFileSaveAsync(Logfile);
                     try
                     {
-                        await CommonTask.ForceImageDownloader(_string, imageName, Constants.TIFF_extension);
+                        await CommonTask.ForceImageDownloader(_string, imageName, Constant.TIFF_extension);
                     }
-                    catch
+                    catch (Exception exc)
                     {
+                        Logfile.Error_details = exc.ToString();
+                        Logfile.Error_title = "NotesImagedownloader Method";
+                        Logfile.Location = "NotesTask";
+                        ErrorLogTask.LogFileSaveAsync(Logfile);
                     }
                 }
             }
 
         }
-        public static async void GetNotesImagesSubjectsAsync(List<SubjectObservable> subjects)
+        public static void GetNotesImagesSubjectsAsync(List<SubjectModel> subjects)
         {
-            List<TopicObservable> topics = new List<TopicObservable>();
+            List<TopicModel> topics = new List<TopicModel>();
             try
             {
-                var db = new SQLite.SQLiteConnection(Constants.dbPath);
+                var db = new SQLite.SQLiteConnection(Constant.dbPath);
                 foreach (var subject in subjects)
                 {
                     topics = subject.topics;
@@ -484,8 +498,7 @@ namespace BrainShare.Core
                             string new_notes = NotesChanger(topic.body);
                             try
                             {
-                                NotesImageDownloader(new_notes, subject.name, topic.folder_name); 
-                                new_notes = await NotesUpdater(new_notes, subject.name, topic.folder_name); 
+                                NotesImageDownloader(new_notes, subject.name, topic.folder_name);
 
                                 Topic newTopic = new Topic(topic.TopicID, subject.Id, topic.TopicTitle, topic.body,
                                     new_notes, topic.Updated_at, topic.teacher, topic.folder_id, topic.folder_name);

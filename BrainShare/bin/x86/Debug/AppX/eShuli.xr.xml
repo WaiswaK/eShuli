@@ -4,18 +4,23 @@
     <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
   </Roots.Interfaces>
   <Roots.PropertyPathNames>
-    <RootPropertyPathName Name="TopicFiles" />
+    <RootPropertyPathName Name="AssignmentFiles" />
+    <RootPropertyPathName Name="FileName" />
+    <RootPropertyPathName Name="AssignmentTitle" />
     <RootPropertyPathName Name="NavigationHelper" />
     <RootPropertyPathName Name="GoBackCommand" />
+    <RootPropertyPathName Name="TopicFiles" />
     <RootPropertyPathName Name="DefaultViewModel" />
+    <RootPropertyPathName Name="Items" />
+    <RootPropertyPathName Name="ImagePath" />
+    <RootPropertyPathName Name="IsEnabled" />
     <RootPropertyPathName Name="BookList" />
     <RootPropertyPathName Name="book_title" />
     <RootPropertyPathName Name="thumb_url" />
     <RootPropertyPathName Name="CategoryName" />
+    <RootPropertyPathName Name="PasswordLink" />
+    <RootPropertyPathName Name="RegisterLink" />
     <RootPropertyPathName Name="userName" />
-    <RootPropertyPathName Name="Items" />
-    <RootPropertyPathName Name="ImagePath" />
-    <RootPropertyPathName Name="IsEnabled" />
     <RootPropertyPathName Name="VideoTitle" />
     <RootPropertyPathName Name="CategoryList" />
     <RootPropertyPathName Name="CourseList" />
@@ -24,23 +29,18 @@
     <RootPropertyPathName Name="name" />
     <RootPropertyPathName Name="SchoolName" />
     <RootPropertyPathName Name="SchoolBadge" />
+    <RootPropertyPathName Name="VideosList" />
+    <RootPropertyPathName Name="AssignmentList" />
     <RootPropertyPathName Name="FileList" />
     <RootPropertyPathName Name="TopicList" />
-    <RootPropertyPathName Name="categoryName" />
-    <RootPropertyPathName Name="categoryImage" />
-    <RootPropertyPathName Name="FileName" />
-    <RootPropertyPathName Name="folder_name" />
-    <RootPropertyPathName Name="SubjectName" />
-    <RootPropertyPathName Name="AssignmentFiles" />
-    <RootPropertyPathName Name="AssignmentTitle" />
-    <RootPropertyPathName Name="AssignmentList" />
     <RootPropertyPathName Name="teacher" />
     <RootPropertyPathName Name="title" />
-    <RootPropertyPathName Name="AttachmentList" />
-    <RootPropertyPathName Name="TopicName" />
+    <RootPropertyPathName Name="folder_name" />
+    <RootPropertyPathName Name="SubjectName" />
     <RootPropertyPathName Name="TopicTitle" />
     <RootPropertyPathName Name="FolderName" />
-    <RootPropertyPathName Name="VideosList" />
+    <RootPropertyPathName Name="AttachmentList" />
+    <RootPropertyPathName Name="TopicName" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -63,13 +63,13 @@
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="Children" />
-      <RootProperty Name="ChildrenTransitions" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Visibility" />
       <RootProperty Name="Height" />
+      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="ChildrenTransitions" />
+      <RootProperty Name="Visibility" />
       <RootMethod Name="GetRowSpan" />
       <RootMethod Name="SetRowSpan" />
       <RootMethod Name="GetColumnSpan" />
@@ -79,7 +79,6 @@
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
     </RootType>
-    <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
     </RootType>
@@ -117,15 +116,6 @@
       <RootMethod Name="GetItemType" />
       <RootMethod Name="SetItemType" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Children" />
-      <RootProperty Name="Background" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Opacity" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Style" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Text" />
       <RootProperty Name="Foreground" />
@@ -133,35 +123,16 @@
       <RootProperty Name="Style" />
       <RootProperty Name="IsHitTestVisible" />
       <RootProperty Name="TextWrapping" />
+      <RootProperty Name="TextLineBounds" />
+      <RootProperty Name="OpticalMarginAlignment" />
+      <RootProperty Name="FontWeight" />
+      <RootProperty Name="FontSize" />
       <RootProperty Name="Name" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="Padding" />
-      <RootProperty Name="FontSize" />
-      <RootProperty Name="TextLineBounds" />
-      <RootProperty Name="OpticalMarginAlignment" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="FontFamily" />
-      <RootProperty Name="FontWeight" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.WebView">
-      <RootProperty Name="Name" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Height" />
-      <RootEvent Name="Loaded" />
-    </RootType>
-    <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.StaticResourceExtension" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ProgressRing">
-      <RootProperty Name="IsActive" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Padding" />
-    </RootType>
-    <RootType FullName="BrainShare.Views.CreateAccountPage" />
-    <RootType FullName="Windows.UI.Xaml.Data.RelativeSource">
-      <RootProperty Name="Mode" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Hub">
       <RootProperty Name="Margin" />
@@ -170,6 +141,7 @@
     <RootType FullName="Windows.UI.Xaml.Controls.HubSection">
       <RootProperty Name="Header" />
       <RootProperty Name="ContentTemplate" />
+      <RootProperty Name="Name" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
@@ -187,38 +159,36 @@
       <RootEvent Name="SelectionChanged" />
       <RootEvent Name="ItemClick" />
     </RootType>
-    <RootType FullName="BrainShare.Views.LibraryCategoryBooks" />
-    <RootType FullName="System.String" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Control">
+    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="Opacity" />
+      <RootProperty Name="Children" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="Background" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Setter">
-      <RootProperty Name="Property" />
-      <RootProperty Name="Value" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
-      <RootProperty Name="Name" />
-      <RootProperty Name="PlaceholderText" />
-      <RootProperty Name="Padding" />
-      <RootProperty Name="Text" />
-      <RootProperty Name="Margin" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
-      <RootProperty Name="Name" />
-      <RootProperty Name="PlaceholderText" />
-      <RootProperty Name="Padding" />
-      <RootProperty Name="Margin" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.HyperlinkButton">
-      <RootProperty Name="NavigateUri" />
-      <RootProperty Name="Content" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Padding" />
-      <RootProperty Name="BorderBrush" />
       <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="FontFamily" />
+      <RootProperty Name="Style" />
     </RootType>
-    <RootType FullName="BrainShare.LoginPage" />
+    <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.StaticResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.WebView">
+      <RootProperty Name="Name" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Margin" />
+      <RootEvent Name="Loaded" />
+    </RootType>
+    <RootType FullName="BrainShare.Views.AssignmentView" />
+    <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ProgressRing">
+      <RootProperty Name="IsActive" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Padding" />
+    </RootType>
+    <RootType FullName="BrainShare.Views.CreateAccountView" />
+    <RootType FullName="Windows.UI.Xaml.Data.RelativeSource">
+      <RootProperty Name="Mode" />
+    </RootType>
     <RootType FullName="BrainShare.Common.BooleanToVisibilityConverter" />
     <RootType FullName="Windows.UI.Xaml.VisualStateManager">
       <RootMethod Name="GetVisualStateGroups" />
@@ -241,6 +211,10 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.FrameworkElement">
       <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Setter">
+      <RootProperty Name="Property" />
+      <RootProperty Name="Value" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
       <RootProperty Name="Icon" />
@@ -270,14 +244,42 @@
       <RootProperty Name="Value" />
     </RootType>
     <RootType FullName="BrainShare.Views.LibraryBookReader" />
+    <RootType FullName="BrainShare.Views.LibraryCategoryBooksView" />
+    <RootType FullName="System.String" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Control">
+      <RootProperty Name="Background" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="Name" />
+      <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="Padding" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
+      <RootProperty Name="Name" />
+      <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="Padding" />
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.HyperlinkButton">
+      <RootProperty Name="NavigateUri" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Padding" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="FontFamily" />
+    </RootType>
+    <RootType FullName="BrainShare.LoginView" />
+    <RootType FullName="BrainShare.Views.PDFReader" />
     <RootType FullName="Windows.UI.Xaml.Controls.MediaElement">
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
       <RootProperty Name="AreTransportControlsEnabled" />
       <RootEvent Name="DoubleTapped" />
     </RootType>
-    <RootType FullName="BrainShare.Views.PlayPage" />
-    <RootType FullName="BrainShare.Views.PDFViewPage" />
+    <RootType FullName="BrainShare.Views.PlayView" />
     <RootType FullName="Windows.UI.Xaml.Controls.SettingsFlyout">
       <RootProperty Name="IconSource" />
       <RootProperty Name="Title" />
@@ -300,12 +302,9 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Visibility" />
     </RootType>
-    <RootType FullName="BrainShare.Views.StudentPage" />
-    <RootType FullName="BrainShare.Views.SubjectPage" />
-    <RootType FullName="BrainShare.Views.AssignmentPage" />
-    <RootType FullName="BrainShare.Views.AssignmentsPage" />
-    <RootType FullName="BrainShare.Views.TopicPage" />
-    <RootType FullName="BrainShare.Views.TopicsPage" />
-    <RootType FullName="BrainShare.Views.VideosPage" />
+    <RootType FullName="BrainShare.Views.StudentView" />
+    <RootType FullName="BrainShare.Views.SubjectView" />
+    <RootType FullName="BrainShare.Views.TopicsView" />
+    <RootType FullName="BrainShare.Views.TopicView" />
   </Roots.RootTypes>
 </Roots>

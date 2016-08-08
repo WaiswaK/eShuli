@@ -33,20 +33,20 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            
+
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="120"/>
             <ColumnDefinition x:Name="primaryColumn" Width="*"/>
         </Grid.ColumnDefinitions>
-        
+
 
         <!-- Back button and page title -->
         <Grid x:Name="titlePanel">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            
+
             <AppBarButton x:Name="backButton" Icon="Back" Height="95" Margin="10,46,10,0"
                           Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}" 
                           Visibility="{Binding IsEnabled, Converter={StaticResource BooleanToVisibilityConverter}, RelativeSource={RelativeSource Mode=Self}}"

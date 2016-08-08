@@ -10,25 +10,25 @@ namespace BrainShare.Database
         SQLiteAsyncConnection conn;
         public DbConnection()
         {
-            conn = new SQLiteAsyncConnection(Constants.dbPath);
+            conn = new SQLiteAsyncConnection(Constant.dbPath);
         }
         public async Task<bool> LocalDatabaseNotPresent(string fileName)
         {
-           var item = await Constants.appFolder.TryGetItemAsync(fileName);
+           var item = await Constant.appFolder.TryGetItemAsync(fileName);
            return item == null;
         }
         public async Task InitializeDatabase()
         {
-            if (await LocalDatabaseNotPresent(Constants.dbName))
+            if (await LocalDatabaseNotPresent(Constant.dbName))
             {
-                using (var db = new SQLiteConnection(Constants.dbPath))
+                using (var db = new SQLiteConnection(Constant.dbPath))
                 {
                     db.CreateTable<Subject>();
                     db.CreateTable<Topic>();
                     db.CreateTable<Assignment>();
                     db.CreateTable<Attachment>();
                     db.CreateTable<Video>();
-                    db.CreateTable<UserAccount>();
+                    db.CreateTable<User>();
                     db.CreateTable<School>();
                     db.CreateTable<Book>();
                 };
