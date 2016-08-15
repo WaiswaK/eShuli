@@ -1,12 +1,15 @@
 ﻿<Page
-    x:Class="BrainShare.Views.AssignmentView"
+    x:Name ="pageRoot"
+    x:Class ="BrainShare.Views.AssignmentView"
+    DataContext="{ Binding DefaultViewModel, RelativeSource ={RelativeSource Self }}"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:BrainShare.Views"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
-
+    xmlns:x ="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local ="using:BrainShare.Views"
+    xmlns:common ="using:BrainShare.Common"
+    xmlns:d ="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc ="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable ="d">
+  
     <Page.Resources>
         <CollectionViewSource
             x:Name ="files"
@@ -52,7 +55,7 @@
                 </HubSection.Header>
 
                 <DataTemplate>
-                    <WebView x:ConnectionId='2' Width ="1200" Height="500" Name ="WebView2"                         />
+                    <WebView Width ="1200" Height="500" Name ="WebView2" Loaded="WebView2_Loaded"/>
                 </DataTemplate>
             </HubSection>
 
@@ -61,7 +64,7 @@
                     <TextBlock x:Uid="Section1Header" TextLineBounds="TrimToBaseline" OpticalMarginAlignment ="TrimSideBearings" Text="Attachments >" Foreground ="Green"/>
                 </HubSection.Header>
                 <DataTemplate>
-                    <GridView x:ConnectionId='1' ItemsSource ="{ Binding AssignmentFiles }"
+                    <GridView ItemsSource ="{ Binding AssignmentFiles }"
                               x:Name ="FilesGridView"        
                               AutomationProperties.AutomationId ="ItemGridView"
                               AutomationProperties.Name ="Items In Group"                 
@@ -71,7 +74,7 @@
                               Margin ="0,20,0,0"
                               CanDragItems ="True"
                               CanReorderItems ="True"
-                                                                                                      
+                              SelectionChanged ="itemGridView_SelectionChanged" ItemClick="File_click"
                               AllowDrop ="True">
 
                         <GridView.ItemTemplate>
@@ -102,6 +105,5 @@
         </Hub>
 
     </Grid >
-    
-</Page>
 
+</Page>

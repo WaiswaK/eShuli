@@ -16,7 +16,7 @@ namespace BrainShare.Views
         public CreateAccountView()
         {
             InitializeComponent();
-
+            
         }
         private void WebView2_Loaded(object sender, RoutedEventArgs e)
         {
@@ -28,5 +28,5 @@ namespace BrainShare.Views
             Uri uri = new Uri(Constant.FullBaseUri);
             WebView2.Navigate(uri);
         }
-    }
+    }   
 }

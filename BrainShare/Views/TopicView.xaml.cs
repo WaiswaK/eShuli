@@ -40,7 +40,7 @@ namespace BrainShare.Views
         {
             get { return navigationHelper; }
         }
-
+          
 
         public TopicView()
         {
@@ -48,7 +48,7 @@ namespace BrainShare.Views
             InitializeComponent();
             navigationHelper = new NavigationHelper(this);
             navigationHelper.LoadState += navigationHelper_LoadState;
-            navigationHelper.SaveState += navigationHelper_SaveState;
+            navigationHelper.SaveState += navigationHelper_SaveState;          
         }
 
         /// <summary>
@@ -64,11 +64,11 @@ namespace BrainShare.Views
         /// session. The state will be null the first time a page is visited.</param>
         private void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
-            var topic = e.NavigationParameter as TopicModel;
-            TopicViewModel vm = new TopicViewModel(topic);
-            DataContext = vm;
-            all_notes = topic.notes;
-            Current_Topic = topic;
+             var topic = e.NavigationParameter as TopicModel;
+             TopicViewModel vm = new TopicViewModel(topic);
+             DataContext = vm;
+             all_notes = topic.notes;
+             Current_Topic = topic;
         }
 
         private async void WebView2_Loaded(object sender, RoutedEventArgs e)
@@ -114,7 +114,7 @@ namespace BrainShare.Views
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            navigationHelper.OnNavigatedTo(e);
+            navigationHelper.OnNavigatedTo(e); 
         }
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {

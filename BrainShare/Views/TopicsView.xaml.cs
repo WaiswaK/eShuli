@@ -62,20 +62,19 @@ namespace BrainShare.Views
         {
             var topics = e.NavigationParameter as FolderModel;
             TopicsViewModel vm = new TopicsViewModel(topics);
-            DataContext = vm;
+            DataContext = vm;  
         }
         private void itemGridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
-        private void Topic_click(object sender, ItemClickEventArgs e)
-        {
+        private void Topic_click(object sender, ItemClickEventArgs e){
             var item = e.ClickedItem;
             TopicModel _topic = ((TopicModel)item);
             Frame.Navigate(typeof(TopicView), _topic);
         }
 
-
+  
         /// <summary>
         /// Preserves state associated with this page in case the application is suspended or the
         /// page is discarded from the navigation cache.  Values must conform to the serialization
@@ -102,7 +101,7 @@ namespace BrainShare.Views
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            navigationHelper.OnNavigatedTo(e);
+            navigationHelper.OnNavigatedTo(e); 
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)

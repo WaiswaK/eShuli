@@ -1,15 +1,20 @@
 ﻿using BrainShare.Common;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
+using System.Threading.Tasks;
 using Windows.Data.Json;
+using Windows.Storage;
+using Windows.Storage.Streams;
 using BrainShare.Models;
 using BrainShare.Views;
 using Windows.UI.Popups;
 using BrainShare.Database;
+using System.Runtime.Serialization;
 using Windows.UI.ApplicationSettings;
 using Windows.System;
 using BrainShare.Core;
@@ -48,7 +53,7 @@ namespace BrainShare
             SettingsPane.GetForCurrentView().CommandsRequested += onCommandsRequested;
             navigationHelper = new NavigationHelper(this);
             navigationHelper.LoadState += navigationHelper_LoadState;
-            navigationHelper.SaveState += navigationHelper_SaveState;
+            navigationHelper.SaveState += navigationHelper_SaveState;    
         }
 
         //New method for Settings
@@ -62,9 +67,9 @@ namespace BrainShare
                     sf.Show();
                 }));
         }
-
-
-        private async void OpenPrivacyPolicy(IUICommand command)
+        
+                
+    private async void OpenPrivacyPolicy(IUICommand command)
         {
             Uri uri = new Uri(Constant.PrivacyPolicyUri);
             await Launcher.LaunchUriAsync(uri);
@@ -107,7 +112,8 @@ namespace BrainShare
         /// in addition to page state preserved during an earlier session.   
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
-            navigationHelper.OnNavigatedFrom(e);
+                navigationHelper.OnNavigatedFrom(e);
+            //SettingsPane.GetForCurrentView().CommandsRequested -= onCommandsRequested; // Added here
         }
         #endregion
         public void Button_Click(object sender, RoutedEventArgs e)
@@ -124,25 +130,25 @@ namespace BrainShare
         }
         public async void Login()
         {
-            try
-            {
-                await CommonTask.InitializeDatabase();
-            }
-            catch (Exception ex)
-            {
+             try
+             {
+                 await CommonTask.InitializeDatabase();
+             }
+             catch(Exception ex)
+             {
                 Logfile.Error_details = ex.ToString();
                 Logfile.Error_title = "Login Method";
                 Logfile.Location = "LoginView";
                 ErrorLogTask.LogFileSaveAsync(Logfile);
             }
-            if (CommonTask.IsInternetConnectionAvailable())
-            {
-                OnlineExperience();
-            }
-            else
-            {
-                OfflineExperience();
-            }
+             if (CommonTask.IsInternetConnectionAvailable())
+             {
+                 OnlineExperience();
+             }
+             else
+             {
+                 OfflineExperience();
+             }            
         }
         private void OfflineExperience()
         {
@@ -287,7 +293,7 @@ namespace BrainShare
                 {
                     Library = await JSONTask.Current_Library(username, password, userdetails.School.SchoolId);
                 }
-                catch (Exception ex)
+                catch(Exception ex)
                 {
                     Logfile.Error_details = ex.ToString();
                     Logfile.Error_title = "CreateUser Method";
@@ -371,7 +377,7 @@ namespace BrainShare
                                     {
                                         await DBInsertionTask.InsertUserAsync(user);
                                     }
-                                    catch (Exception ex)
+                                    catch(Exception ex)
                                     {
                                         Logfile.Error_details = ex.ToString();
                                         Logfile.Error_title = "AuthenticateUser Method";

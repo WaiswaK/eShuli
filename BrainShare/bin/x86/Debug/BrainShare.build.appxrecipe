@@ -77,8 +77,8 @@
     <AppxPackagedFile Include="D:\OneDrive\Projects\eShuli 1.0.0.0\BrainShare\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\OneDrive\Projects\eShuli 1.0.0.0\BrainShare\bin\x86\Debug\Views\AssignmentView.xaml.xbf">
-      <PackagePath>Views\AssignmentView.xaml.xbf</PackagePath>
+    <AppxPackagedFile Include="D:\OneDrive\Projects\eShuli 1.0.0.0\BrainShare\bin\x86\Debug\Views\AssignmentView.xbf">
+      <PackagePath>Views\AssignmentView.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\OneDrive\Projects\eShuli 1.0.0.0\BrainShare\bin\x86\Debug\Views\CreateAccountView.xbf">
       <PackagePath>Views\CreateAccountView.xbf</PackagePath>

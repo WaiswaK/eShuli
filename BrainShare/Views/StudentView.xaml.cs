@@ -393,7 +393,7 @@ namespace BrainShare.Views
                                         else if (newContentLibrary == null && updatedOldContentLibrary == null)
                                         {
                                             ModelTask.UserUpdater(userdetails, newcourses, updateable, currentUser, null, null);
-
+                                           
                                         }
                                         else if (newContentLibrary != null && updatedOldContentLibrary == null)
                                         {
@@ -436,7 +436,7 @@ namespace BrainShare.Views
                                 List<SubjectModel> oldcourses = await JSONTask.Get_Subjects(username, password, remainedIDs, IDs, subjects);
                                 foreach (var course in oldcourses)
                                 {
-                                    courses.Add(course);
+                                    courses.Add(course); 
                                 }
                                 List<SubjectModel> updateable = ModelTask.UpdateableSubjects(InstalledSubjects, oldcourses);
                                 if (updateable == null)
@@ -511,7 +511,7 @@ namespace BrainShare.Views
                 }
                 else
                 {
-
+                   
                 }
             }
             catch (Exception ex)
@@ -523,7 +523,7 @@ namespace BrainShare.Views
                 currentUser.update_status = Constant.finished_update;
                 pgBar.Visibility = Visibility.Collapsed;
             }
-        }
+        }    
         private void Subject_click(object sender, ItemClickEventArgs e)
         {
             var item = e.ClickedItem;

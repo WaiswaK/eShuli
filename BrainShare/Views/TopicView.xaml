@@ -45,7 +45,7 @@
                         IsHitTestVisible ="false" TextWrapping ="NoWrap" />
 
         <Hub Grid.Row="1" Grid.Column ="1" Grid.ColumnSpan="2" Margin="-50,-80,0,0">
-
+            
             <HubSection>
                 <HubSection.Header>
                     <TextBlock x:Uid="Section1Header" TextLineBounds="TrimToBaseline" OpticalMarginAlignment ="TrimSideBearings" Text="Notes >" Foreground ="Green"/>
@@ -95,9 +95,9 @@
                     </GridView>
                 </DataTemplate>
             </HubSection>
-
+            
         </Hub>
 
     </Grid >
-
+    
 </Page>

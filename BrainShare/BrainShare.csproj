@@ -170,8 +170,8 @@
     <Compile Include="ViewModels\SubjectViewModel.cs" />
     <Compile Include="ViewModels\TopicsViewModel.cs" />
     <Compile Include="ViewModels\TopicViewModel.cs" />
-    <Compile Include="Views\AssignmentView.xaml.xaml.cs">
-      <DependentUpon>AssignmentView.xaml.xaml</DependentUpon>
+    <Compile Include="Views\AssignmentView.xaml.cs">
+      <DependentUpon>AssignmentView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\CreateAccountView.xaml.cs">
       <DependentUpon>CreateAccountView.xaml</DependentUpon>
@@ -237,7 +237,7 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Views\AssignmentView.xaml.xaml">
+    <Page Include="Views\AssignmentView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

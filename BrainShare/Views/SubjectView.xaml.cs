@@ -12,7 +12,7 @@ namespace BrainShare.Views
     /// <summary>
     /// A basic page that provides characteristics common to most applications.
     /// </summary>
-    public sealed partial class SubjectView : Page
+    public sealed partial class SubjectView: Page
     {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
@@ -61,13 +61,13 @@ namespace BrainShare.Views
             if (subject.files.Count == 0)
                 Files.Visibility = Visibility.Collapsed;
             SubjectViewModel vm = new SubjectViewModel(subject);
-            DataContext = vm;
-        }
+            DataContext = vm;  
+        }        
         private void Topic_click(object sender, ItemClickEventArgs e)
         {
             var item = e.ClickedItem;
             FolderModel _folder = ((FolderModel)item);
-            Frame.Navigate(typeof(TopicsView), _folder);
+            Frame.Navigate(typeof(TopicsView), _folder); 
         }
         private void Book_click(object sender, ItemClickEventArgs e)
         {
@@ -97,7 +97,7 @@ namespace BrainShare.Views
         /// serializable state.</param>
         private void navigationHelper_SaveState(object sender, SaveStateEventArgs e)
         {
-        }
+        }       
         private void itemGridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
         }

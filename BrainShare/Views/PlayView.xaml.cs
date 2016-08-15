@@ -78,62 +78,62 @@ namespace BrainShare.Views
             bool download = false;
             if (CommonTask.IsInternetConnectionAvailable())
             {
-                try
-                {
+                    try
+                    {
                     loadedFile = await Constant.appFolder.GetFileAsync(filePath);
-                    IRandomAccessStream stream = await loadedFile.OpenAsync(FileAccessMode.Read);
-                    MediaElement.SetSource(stream, loadedFile.ContentType);
-                    Offline.Visibility = Visibility.Visible;
-                    found = true;
-                }
-                catch (Exception ex)
-                {
-                    string exption = ex.ToString();
-                    found = false;
-                }
-
-                if (found == false)
-                {
-                    string newlink = CommonTask.newYouTubeLink(filePath);
-                    string Content = string.Format(@"<iframe width='{0}' height='{1}' src='{2}' frameborder='{3}'></iframe>", "560", "315", newlink, "0");
-                    webView.Height = 640;
-                    webView.Width = 640;
-                    webView.NavigateToString(Content);
-                    Online.Visibility = Visibility.Visible;
-
-                    var messageDialog = new MessageDialog(Message.File_Access_Message, Message.File_Access_Header);
-                    messageDialog.Commands.Add(new UICommand(Message.Yes, (command) =>
+                        IRandomAccessStream stream = await loadedFile.OpenAsync(FileAccessMode.Read);
+                        MediaElement.SetSource(stream, loadedFile.ContentType);
+                        Offline.Visibility = Visibility.Visible;
+                        found = true;
+                    }
+                    catch (Exception ex)
                     {
-                        download = true;
-                    }));
-                    messageDialog.Commands.Add(new UICommand(Message.No, (command) =>
-                    {
-                        download = false;
-                    }));
+                        string exption = ex.ToString();
+                        found = false;
+                    }
 
-                    messageDialog.DefaultCommandIndex = 1;
-                    await messageDialog.ShowAsync();
-
-                    if (download == true)
+                    if (found == false)
                     {
-                        //Youtube Downloader will be called here
-                        //await CommonTask.FileDownloader(filePath, fileName);
-                        //using (var db = new SQLite.SQLiteConnection(Constants.dbPath))
-                        //{
-                        //  var query = (db.Table<Attachment>().Where(c => c.AttachmentID == fileId)).Single();
-                        // int id = query.AttachmentID;
-                        //int Aid = query.AssignmentID;
-                        //int Sid = query.SubjectId;
-                        //int Tid = query.TopicID;
-                        //string filename = query.FileName;
-                        //string filepath = query.FilePath;
-                        //string newPath = fileName + ".pdf";
-                        //Attachment fileDownloaded = new Attachment(id, Tid, fileName, newPath, Sid, Aid);
-                        //db.Update(fileDownloaded);
-                        //}
+                        string newlink = CommonTask.newYouTubeLink(filePath);
+                        string Content = string.Format(@"<iframe width='{0}' height='{1}' src='{2}' frameborder='{3}'></iframe>", "560", "315", newlink, "0");
+                        webView.Height = 640;
+                        webView.Width = 640;
+                        webView.NavigateToString(Content);
+                        Online.Visibility = Visibility.Visible;
+
+                        var messageDialog = new MessageDialog(Message.File_Access_Message, Message.File_Access_Header);
+                        messageDialog.Commands.Add(new UICommand(Message.Yes, (command) =>
+                        {
+                            download = true;
+                        }));
+                        messageDialog.Commands.Add(new UICommand(Message.No, (command) =>
+                        {
+                            download = false;
+                        }));
+
+                        messageDialog.DefaultCommandIndex = 1;
+                        await messageDialog.ShowAsync();
+
+                        if (download == true)
+                        {
+                            //Youtube Downloader will be called here
+                            //await CommonTask.FileDownloader(filePath, fileName);
+                            //using (var db = new SQLite.SQLiteConnection(Constants.dbPath))
+                            //{
+                              //  var query = (db.Table<Attachment>().Where(c => c.AttachmentID == fileId)).Single();
+                               // int id = query.AttachmentID;
+                                //int Aid = query.AssignmentID;
+                                //int Sid = query.SubjectId;
+                                //int Tid = query.TopicID;
+                                //string filename = query.FileName;
+                                //string filepath = query.FilePath;
+                                //string newPath = fileName + ".pdf";
+                                //Attachment fileDownloaded = new Attachment(id, Tid, fileName, newPath, Sid, Aid);
+                                //db.Update(fileDownloaded);
+                            //}
+                        }
                     }
                 }
-            }
             else
             {
                 try
@@ -154,7 +154,7 @@ namespace BrainShare.Views
                     var messageDialog = new MessageDialog(Message.Offline_File_Unavailable, Message.File_Access_Header).ShowAsync();
                 }
             }
-        }
+        }     
 
         /// <summary>
         /// Preser ves state associated with this page in case the application is suspended or the

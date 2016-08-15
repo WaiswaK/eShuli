@@ -55,5 +55,7 @@
         <WebView x:ConnectionId='1' Grid.Row="1" Grid.Column ="1" Width ="1200" Margin="-50,-80,0,0" Grid.ColumnSpan="2" Height="600" Name ="WebView2"                         />
 
     </Grid >
+
 </Page>
+    
 

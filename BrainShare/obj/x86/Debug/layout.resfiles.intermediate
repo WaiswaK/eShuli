@@ -13,7 +13,7 @@ Assets\StoreLogo.scale-100.png
 Assets\Video.png
 App.xbf
 eShuli.xr.xml
-Views\AssignmentView.xaml.xbf
+Views\AssignmentView.xbf
 Views\CreateAccountView.xbf
 Views\LibraryBookReader.xbf
 Views\LibraryCategoryBooksView.xbf
