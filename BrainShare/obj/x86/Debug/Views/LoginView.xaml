@@ -12,7 +12,7 @@
     
     <Page.Resources>
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
-        <x:String x:Key="AppName">BrainShare</x:String>
+        <x:String x:Key="AppName">eShuli</x:String>
         <Style TargetType="Button" x:Name="Login_Button">
             <Setter Property="Background" Value="Aqua"/>
         </Style>
@@ -67,8 +67,8 @@
         <Image HorizontalAlignment="Left" Height="61" Margin="10,10,0,0" VerticalAlignment="Top" 
                Width="60" Source="ms-appx:///Assets/Logo.png" Stretch="Fill"/>
         
-        <TextBlock HorizontalAlignment="Left" Margin="75,13,0,0" TextWrapping="Wrap" Text="BrainShare" 
-                   Foreground="BlueViolet" VerticalAlignment="Top" 
+        <TextBlock HorizontalAlignment="Left" Margin="75,13,0,0" TextWrapping="Wrap" Text="eShuli" 
+                   Foreground="White" VerticalAlignment="Top" 
                    FontFamily="Segoe UI Semilight" FontSize="48" FontWeight="Light"/>
 
         <StackPanel  HorizontalAlignment="Left" Grid.Row="2" Grid.Column="0" 
